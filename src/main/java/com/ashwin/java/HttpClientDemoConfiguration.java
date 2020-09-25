@@ -137,7 +137,7 @@ public class HttpClientDemoConfiguration {
     }
 
     @Bean
-    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
     public ResponseErrorHandler responseErrorHandler() {
         return new ResponseErrorHandler() {
             @Override
@@ -153,7 +153,7 @@ public class HttpClientDemoConfiguration {
     }
 
     @Bean
-    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
     public ClientHttpRequestInterceptor clientHttpRequestInterceptor() {
         return new ClientHttpRequestInterceptor() {
             @Override
